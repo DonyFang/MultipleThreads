@@ -16,6 +16,7 @@
 #import "GCDThreeViewController.h"
 #import "GCDFourViewController.h"
 #import "GCDFiveViewController.h"
+#import "GCDGroupViewController.h"
 @interface ViewController ()<UITableViewDelegate,UITableViewDataSource>
 @property(nonatomic,strong)UITableView *mainTable;
 
@@ -69,6 +70,8 @@
         cell.textLabel.text = @"GCD --four  并发队列异步任务（无序）加线程锁(@synchronized)";
     }else if (indexPath.row == 8){
         cell.textLabel.text = @"GCD -- five  线程之间的调度关系";
+    }else if (indexPath.row == 9){
+        cell.textLabel.text = @"GCD -- six  线程组group";
     }
     return cell;
 }
@@ -113,6 +116,9 @@
         [self.navigationController pushViewController:gcdVc animated:YES];
     }else if (indexPath.row == 8){
         GCDFiveViewController  *gcdVc = [[GCDFiveViewController alloc] init];
+        [self.navigationController pushViewController:gcdVc animated:YES];
+    }else if (indexPath.row == 9){
+        GCDGroupViewController  *gcdVc = [[GCDGroupViewController alloc] init];
         [self.navigationController pushViewController:gcdVc animated:YES];
     }
 }

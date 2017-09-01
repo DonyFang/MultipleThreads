@@ -25,6 +25,8 @@
 		D9A951B71F580C60006AB77A /* GCDThreeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D9A951B61F580C60006AB77A /* GCDThreeViewController.m */; };
 		D9A951BA1F580EA0006AB77A /* GCDFourViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D9A951B91F580EA0006AB77A /* GCDFourViewController.m */; };
 		D9A951BD1F5816B6006AB77A /* GCDFiveViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D9A951BC1F5816B6006AB77A /* GCDFiveViewController.m */; };
+		D9A951C01F58EEDA006AB77A /* GCDGroupViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D9A951BF1F58EEDA006AB77A /* GCDGroupViewController.m */; };
+		D9A951C31F590702006AB77A /* Person.m in Sources */ = {isa = PBXBuildFile; fileRef = D9A951C21F590702006AB77A /* Person.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -81,6 +83,10 @@
 		D9A951B91F580EA0006AB77A /* GCDFourViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GCDFourViewController.m; sourceTree = "<group>"; };
 		D9A951BB1F5816B6006AB77A /* GCDFiveViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GCDFiveViewController.h; sourceTree = "<group>"; };
 		D9A951BC1F5816B6006AB77A /* GCDFiveViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GCDFiveViewController.m; sourceTree = "<group>"; };
+		D9A951BE1F58EEDA006AB77A /* GCDGroupViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GCDGroupViewController.h; sourceTree = "<group>"; };
+		D9A951BF1F58EEDA006AB77A /* GCDGroupViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GCDGroupViewController.m; sourceTree = "<group>"; };
+		D9A951C11F590702006AB77A /* Person.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Person.h; sourceTree = "<group>"; };
+		D9A951C21F590702006AB77A /* Person.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Person.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -218,6 +224,10 @@
 				D9A951B91F580EA0006AB77A /* GCDFourViewController.m */,
 				D9A951BB1F5816B6006AB77A /* GCDFiveViewController.h */,
 				D9A951BC1F5816B6006AB77A /* GCDFiveViewController.m */,
+				D9A951BE1F58EEDA006AB77A /* GCDGroupViewController.h */,
+				D9A951BF1F58EEDA006AB77A /* GCDGroupViewController.m */,
+				D9A951C11F590702006AB77A /* Person.h */,
+				D9A951C21F590702006AB77A /* Person.m */,
 			);
 			path = GCD;
 			sourceTree = "<group>";
@@ -362,10 +372,12 @@
 				D9A9516A1F57FA54006AB77A /* ViewController.m in Sources */,
 				D9A951B41F580AC1006AB77A /* GCDTwoViewController.m in Sources */,
 				D9A951B71F580C60006AB77A /* GCDThreeViewController.m in Sources */,
+				D9A951C01F58EEDA006AB77A /* GCDGroupViewController.m in Sources */,
 				D9A951BD1F5816B6006AB77A /* GCDFiveViewController.m in Sources */,
 				D9A951671F57FA54006AB77A /* AppDelegate.m in Sources */,
 				D9A951641F57FA53006AB77A /* main.m in Sources */,
 				D9A951A21F57FF6D006AB77A /* NSThreadViewController.m in Sources */,
+				D9A951C31F590702006AB77A /* Person.m in Sources */,
 				D9A951A61F57FFA6006AB77A /* KCImageData.m in Sources */,
 				D9A951AD1F5806F2006AB77A /* NSOperationViewController.m in Sources */,
 			);
@@ -601,6 +613,7 @@
 				D9A9518E1F57FA54006AB77A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		D9A9518F1F57FA54006AB77A /* Build configuration list for PBXNativeTarget "MultipleThreadTests" */ = {
 			isa = XCConfigurationList;
@@ -609,6 +622,7 @@
 				D9A951911F57FA54006AB77A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		D9A951921F57FA54006AB77A /* Build configuration list for PBXNativeTarget "MultipleThreadUITests" */ = {
 			isa = XCConfigurationList;
@@ -617,6 +631,7 @@
 				D9A951941F57FA54006AB77A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
