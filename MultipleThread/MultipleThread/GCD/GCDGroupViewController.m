@@ -116,9 +116,7 @@
     NSLog(@"4");
 }
 
-- (void)updateUIMethod{
-
-    
+- (void)updateUIMethod{//主线程更新UI
     dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
         NSLog(@"异步线程%@",[NSThread currentThread]);
         dispatch_async(dispatch_get_main_queue(), ^{
@@ -128,7 +126,7 @@
 }
 
 
-- (void)afterMethod{
+- (void)afterMethod{//延迟执行
     NSLog(@"延迟前");
     
     dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(2.0 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
