@@ -28,6 +28,8 @@
     self.view.backgroundColor = [UIColor whiteColor];
 
     [self layoutUI];
+    self.navigationItem.title = @"NSThread  动态创建线程";
+ 
 }
 
 #pragma mark 界面布局

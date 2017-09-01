@@ -33,7 +33,7 @@
     self.mainTable.delegate = self;
     
     self.mainTable.dataSource = self;
-    
+     
 
     
 }
@@ -51,13 +51,13 @@
     }
     
     if (indexPath.row == 0) {
-        cell.textLabel.text = @"NSThread--one  开启子线程执行耗时操作";
+        cell.textLabel.text = @"NSThread--one NSThread 隐式创建线程";
         
     }else if(indexPath.row == 1){
-        cell.textLabel.text = @"NSThread--two  开启多条线程加载图片无序";
+        cell.textLabel.text = @"NSThread--two  NSThread 静态创建线程";
 
     }else if (indexPath.row == 2){
-        cell.textLabel.text = @"NSThread--Three  开启多条线程加载图片无序(可以仅仅能设置线程状态设置取消线程)";
+        cell.textLabel.text = @"NSThread--Three NSThread  动态创建线程";
     }else if (indexPath.row == 3){
         cell.textLabel.text = @"NSoperation-one  NSBlockOperation创建多个线程加载图片";
     }else if (indexPath.row == 4){
