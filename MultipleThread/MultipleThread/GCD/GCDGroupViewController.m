@@ -19,16 +19,48 @@
     // Do any additional setup after loading the view.
     self.view.backgroundColor = [UIColor whiteColor];
 
-    
-    
+     
     
 
+}
 
+
+- (void)dispatch_barrier_async{
+    //4之后的任务在我线程sleep之后才执行，这其实就起到了一个线程锁的作用，在多个线程同时操作一个对象的时候，读可以放在并发进行，当写的时候，我们就可以用dispatch_barrier_async方法，效果杠杠的。
+    dispatch_queue_t concurrentDispatchQueue=dispatch_queue_create("com.test.queue", DISPATCH_QUEUE_CONCURRENT);
+    dispatch_async(concurrentDispatchQueue, ^{
+        NSLog(@"0");
+    });
+    dispatch_async(concurrentDispatchQueue, ^{
+        NSLog(@"1");
+    });
+    dispatch_async(concurrentDispatchQueue, ^{
+        NSLog(@"2");
+    });
+    dispatch_async(concurrentDispatchQueue, ^{
+        NSLog(@"3");
+    });
+    dispatch_barrier_async(concurrentDispatchQueue, ^{
+        sleep(1);
+        NSLog(@"4");
+    });
+    dispatch_async(concurrentDispatchQueue, ^{
+        NSLog(@"5");
+    });
+    dispatch_async(concurrentDispatchQueue, ^{
+        NSLog(@"6");
+    });
+    dispatch_async(concurrentDispatchQueue, ^{
+        NSLog(@"7");
+    });
+    dispatch_async(concurrentDispatchQueue, ^{
+        NSLog(@"8");
+    });
+    
 }
 
 - (void)dispatch_set_target_queue{
 
-    
     dispatch_queue_t serialDispatchQueue=dispatch_queue_create("com.test.queue", NULL);
     dispatch_queue_t dispatchgetglobalqueue=dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_LOW, 0);
     dispatch_set_target_queue(serialDispatchQueue, dispatchgetglobalqueue);
